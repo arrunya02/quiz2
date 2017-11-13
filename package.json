@@ -1,7 +1,6 @@
 {
   "name": "Hellomongodb",
   "version": "1.0.0",
-  "description": "",
   "main": "sever.js",
   "dependencies": {
     "express": "^4.16.2",
@@ -14,5 +13,14 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arrunya02/quiz2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arrunya02/quiz2/issues"
+  },
+  "homepage": "https://github.com/arrunya02/quiz2#readme",
+  "description": ""
 }

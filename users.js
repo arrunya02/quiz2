@@ -42,6 +42,25 @@ function search(req, res) {
 //   });
 };
 
+
+
+function location(req, res) {
+  // app.get('/users/search', (req, res) => {
+      var address = req.query.address;
+      MongoClient.connect(url, function (err, db) {
+        if (err) throw err;
+        var query = { address: new RegExp('.*' + address + '.*') };
+        db.collection("users").find(query).toArray(function (err, result) {
+          if (err) throw err;
+          console.log(result);
+          db.close();
+          res.json(result);
+        });
+      });
+  //   });
+  };
+
+  
 function role(req, res) {
     
 
@@ -64,6 +83,7 @@ function role(req, res) {
 module.exports = {
         findAll: findAll,
         search: search,
-        role: role
+        role: role,
+        location:location
 
     };
